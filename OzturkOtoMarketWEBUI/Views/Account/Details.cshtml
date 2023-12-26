@@ -1,0 +1,109 @@
+﻿@model OzturkOtoMarketWEBUI.Models.OrderDetailsModel
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<div class="container-md">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 style="margin-top:50px;">Sipariş Detay Bilgileri</h2>
+            <hr />
+
+            <dl class="row">
+
+                <dt class="col-sm-3"> Sipariş Durumu</dt>
+                <dd class="col-sm-9">
+
+
+
+                    @if (Model.OrderState == OzturkOtoMarketWEBUI.Entity.EnumOrderState.Waiting)
+                    {
+                        <span class="badge badge-danger">Onay Bekleniyor</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-success">Sipariş Tamamlandı</span>
+                    }
+                </dd>
+
+                <dt class="col-sm-3">Sipariş Kimliği</dt>
+                <dd class="col-sm-9">@Model.OrderId</dd>
+
+                <dt class="col-sm-3">Sipariş Numarası</dt>
+                <dd class="col-sm-9">@Model.OrderNumber</dd>
+
+                <dt class="col-sm-3">Toplam</dt>
+                <dd class="col-sm-9">
+                    <i class="fa fa-try" aria-hidden="true"></i>
+                    @Model.Total
+                </dd>
+
+                <dt class="col-sm-3">Sipariş Tarihi</dt>
+                <dd class="col-sm-9">
+
+                    @Model.OrderDate
+                </dd>
+
+                <dt class="col-sm-3">Adres</dt>
+                <dd class="col-sm-9">
+                    @Model.AdresBasligi
+                    <hr />
+                    @Model.Adres
+                    <br />
+                    @Model.Sehir - @Model.Semt - @Model.Mahalle
+                    <br />
+                    @Model.PostaKodu
+                </dd>
+
+                <dt class="col-sm-3">Sepet Geneli</dt>
+                <dd class="col-sm-9">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Fotoğrafı</th>
+                                <th>Ürün Adı</th>
+                                <th>Miktar</th>
+                                <th>Fiyatı</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model.Orderlines)
+                            {
+                                <tr>
+                                    <td>
+                                        <img src="~/Upload/@item.Image" style="width:70px;" />
+                                    </td>
+                                    <td>
+                                        @item.ProductName
+                                    </td>
+                                    <td>
+                                        @item.Qunatity
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-try" aria-hidden="true"></i>
+                                        @item.Price
+                                    </td>
+                                    <td style="width:130px;">
+                                        <a href="/Home/Details/@item.ProductId" class="btn btn-primary btn-sm" target="_blank">Ürün Detayları</a>
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </dd>
+
+
+            </dl>
+
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,38 @@
+﻿@using OzturkOtoMarketWEBUI.Entity;
+@model  IEnumerable<Product>
+
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @foreach (var urun in Model)
+    {
+        <div class="col"> 
+            <div class="card h-100">
+                
+                <img src="~/Upload/@urun.Image" class="card-img-top" alt="@urun.Name">
+                <div class="card-body">
+                    <h5 style="font-size: 20px; font-weight: 400; color: #484848; line-height: 1.35em; height: 34px;" class="card-title">
+                        <a href="/Home/Details/@urun.Id"> @urun.Name </a>
+                    </h5>
+                    <p style="font-size: 15px;" class="card-text pt-2">
+                        @urun.Description
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small style="color: #414141; font-weight: 700; font-size: 17px" class="text-body-secondary">
+                        <i class="fa fa-try" aria-hidden="true"></i>
+                        @urun.Price
+                    </small>
+                    <a href="/Home/Details/@urun.Id" class=" btn btn-success btn-sm float-end">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        Ürünü İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+</div>

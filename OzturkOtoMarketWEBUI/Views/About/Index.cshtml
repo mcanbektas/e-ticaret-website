@@ -1,0 +1,99 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<img src="~/Upload/apple.png" style="width: 500px; float: left; margin-right: 40px; margin-top: 30px; " >
+
+<section class="st-pusher">
+    <div class="mouse-frame"><span class="mouse"></span></div>
+    <div class="st-content">
+        <!-- Zone Container #1 -->
+        <div class="st-content-inner">
+
+
+
+            <div class="fixedColumn hover" style="width: 38%;">
+                <div class="inner" style="background-image:url(/Upload/apple.png) ; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"><div class="cover" style="transform: translate(100%, 0%) matrix(1, 0, 0, 1, 0, 0);"></div></div>
+
+            </div>
+            <div class="sideContent" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                <article class="sidecontent-inner1">
+                    <ul class="breadcrumb">
+                        <li id="26" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemref="28">
+
+                        </li>
+                        <li id="28" class="active" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child">
+
+                        </li>
+                    </ul>
+                    <h1>
+                        HAKKIMIZDA
+                    </h1>
+                    <p></p>
+                    <p></p>
+                    <p>
+                        Ben Mahmut Can Bektaş, İstanbul Beşiktaş bölgesinde bulunan dükkanımıza siz değerli müşterilerimiz için buradayım. Ağabeyim Furkan ile beraber yürüttüğümüz bu şirkette kendisi , 20 yıldan fazla süredir Apple model telefon ustası, ben de ona yardımcı olarak bu heyecan dolu serüvene katılıyorum.
+                    </p>
+                    <!-- Article #1 -->
+                    <p></p>
+                    <p></p>
+                    <p>
+                        Biz sadece bir telefon parça tamir dükkanı değil, aynı zamanda bir Beşiktaşta bir aileyiz. Her sorunuz için buradayız ve telefonunuza dair ihtiyaçlarınıza çözüm bulmak için çalışıyoruz. Güler yüz, samimiyet ve kaliteyi bir arada bulabileceğiniz bir yer arıyorsanız, doğru adrestesiniz!
+                    </p>
+                    <p></p>
+                    <p></p>
+                    <p>
+                        Sizleri FPPRO ailesine bekliyoruz. İhtiyaçlarınız için bize ulaşın, size yardımcı olmak için sabırsızlanıyoruz!
+                    </p>
+                    
+
+
+                    
+                    <br>
+                    <br>
+
+                </article>
+            </div>
+            <link href="/Content/assets/css/Carousel.css" rel="stylesheet">
+            <link href="/Content/assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <script>
+        $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function () {
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            for (var i = 0; i < 4; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+</section>
+

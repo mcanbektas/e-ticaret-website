@@ -1,0 +1,29 @@
+﻿@using OzturkOtoMarketWEBUI.Entity;
+@model  IEnumerable<Product>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="jumbg">
+    <div class="container-md">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">FPPRO</h1>
+            <p class="col-md-8 fs-4">10 Yıllık Tecrübe</p>
+        </div>
+    </div>
+</div>
+        
+
+<div class="container-sm">
+    @Html.Partial("_ProductList",Model)
+
+
+</div>
+
+
+
+

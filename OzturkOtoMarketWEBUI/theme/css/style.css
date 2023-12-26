@@ -1,0 +1,96 @@
+.jumbg{
+    background-image:url("../img/bg.png");
+    background-size:initial;
+    height:100%;
+    color:white;
+}
+
+
+.col
+{
+    padding-top: 70px;
+    /* margin-bottom: 100px; */
+}
+/*
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 400px; /* İstenilen genişliği ayarlayabilirsiniz */
+
+
+.container {
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
+  }
+
+  .footer
+  {
+    padding-top: 450px;
+  }
+
+  
+ .list-group {
+    padding-top: 70px;
+}
+/*
+.list-group ul {
+    list-style: none;
+    padding: 1;
+}
+
+.list-group li {
+    margin-bottom: 10px;
+} */
+
+.product
+{
+    padding-top: 70px;
+}
+#write-review
+{
+    position: absolute;
+    margin-left: -20px;
+    bottom: 1px;
+}
+
+#product-price
+{
+    font-size: 28px;
+    color:brown;
+
+}
+#pricespan
+{
+    position: absolute;
+    margin-left: -15px;
+    top: 10px;
+}
+#buttonn
+{
+    position: absolute;
+    margin-left: -15px;
+    top: 140px;
+}
+
+
+
+
